@@ -1,16 +1,18 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
-//$background-color: #4e4e4e;
-//$font-color: #dfdfdf;
+$background-color: #4e4e4e;
+$font-color: #dfdfdf;
+$nav-color: #dfdfdf;
 $unit: 30px;
 $width: (4 * $unit);
 $height: (4 * $unit);
 
 
+
 body {
-//  background-color: $background-color;
-//  color: $font-color;
+  background-color: $background-color;
+  color: $font-color;
 }
 
 .container {
@@ -34,6 +36,26 @@ body {
 }
 
 .btn {
+  background-color: $nav-color;
+  border: 0;
+  border-radius: 0;
   float: right;
+  margin: 0;
 
 }
+
+.navbar {
+  background-color: $nav-color;
+  border-radius: 0;
+  margin-top: 0;
+  min-height: 40px;
+  width: 100%;
+};
+
+.logo {
+  background-color: $nav-color;
+  height: 100px;
+  margin: 3% 25%;
+  padding: 40px;
+  width: 50%;
+};
