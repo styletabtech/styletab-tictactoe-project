@@ -4,17 +4,11 @@
 // var example = require('./example');
 
 // use require without a reference to ensure a file is bundled
-require('./example');
+//require('./example');
 
+const authEvents = require('./auth/events.js');
 
-// MODAL EVENT
-// $('#sign-in').on('click', function () {
-//   $('#signInModal').modal('show');
-//
-// });
-//
-// $(document).on('ready', function(){
-// $('#sign-out').hide();
-// $('#change-pw').hide();
-// $('#signInModal').modal('show');
-// });
+// On document ready
+$(() => {
+  authEvents.addHandlers();
+});

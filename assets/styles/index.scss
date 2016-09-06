@@ -25,7 +25,7 @@ body {
 }
 
 .row > .col-xs-4 {
-  border: 1px solid #ffffff;
+  border: 1px solid;
   box-sizing: border-box;
   height: $height;
   padding: 12%;
@@ -35,4 +35,5 @@ body {
 
 .btn {
   float: right;
+
 }
