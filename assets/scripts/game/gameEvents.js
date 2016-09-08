@@ -1,65 +1,39 @@
 "use strict";
 
-//establishes board
-const board = ['','','','','','','','',''];
+// const api = require('./gameApi');
+// const ui = require('./gameUi');
+ const logic = require('./logic');
 
-// need a function to check if there's a win horizontally, vertically or diagonally
-//if none of the above then tie.
+//establishes player
 
-// winning combos
-// horizontally - [0,1,2], [3,4,5], [6,7,8]
-// vertically - [0,3,6], [1,4,7], [2,5,8]
-// diagonally - [0,4,6], [2,4,6]
 
-const winRow = function(currentBoard) {
-  // checks for winning row combo
-    for (let i = 0; i < board.length; i += 3) {
-      if(currentBoard[i] === currentBoard[i + 1] &&
-        currentBoard[i] === currentBoard[i + 2]) {
-        return console.log('win'); // add in winning statement function
-      }
-  }
+
+//Player interactivity
+
+const onSquareClick = function (event) {
+  event.preventDefault();
+    logic.display_input(event);
 };
 
-const winColumn = function(currentBoard) {
-  // checks for winning column combo
-    for (let i = 0; i < board.length; i += 3) {
-      if(currentBoard[i] === currentBoard[i + 3] &&
-        currentBoard[i] === currentBoard[i + 6]) {
-        return console.log('win'); // add in winning statement function
-    }
-  }
+const addHandlers = () => {
+  $('.square').on('click', onSquareClick);
+
 };
 
-const winDiagonal = function(currentBoard) {
-  // checks for winning diagonal combo
-    for (let i = 0; i < board.length; i += 3) {
-      if(currentBoard[i] === currentBoard[i + 4] &&
-        currentBoard[i] === currentBoard[i + 8]) {
-        return console.log('win'); // add in winning function
-    }
-      else if (currentBoard[2] === currentBoard[4] &&
-        currentBoard[2] === currentBoard[6]) {
-        return console.log('win'); // add in winning statement function
-    }
-  }
-};
+  //
 
-const tie = function(currentBoard) {
-  // checks for tie
-  for (let i = 0; i < board.length; i++) {
-    if(currentBoard[i] !=== currentBoard[] &&
-      currentBoard[i] === currentBoard[]) {
-      return console.log('tie'); // add in tie statement function
-    }
-  }
-};
+//  console.log('click worked');
+    //  logic.validMove(event)
+    //   .done(ui.playerTurn)
+    //   .fail(ui.fail);
+
+
+
 
 
 module.exports = {
-  board,
-  winRow,
-  winColumn,
-  winDiagonal,
+  onSquareClick,
+  addHandlers,
+
 
 };
