@@ -4,19 +4,27 @@
 // const ui = require('./gameUi');
  const logic = require('./logic');
 
-//establishes player
-
-
-
 //Player interactivity
 
-const onSquareClick = function (event) {
+// const onSquareClick = function (event) {
+//   event.preventDefault();
+//     logic.player(event);
+// };
+
+let turnCounter = 0;
+
+const player = function (event) {
   event.preventDefault();
-    logic.display_input(event);
+  if (turnCounter % 2 === 0) {
+    $(this).text('X');
+  } else {
+    $(this).text('O');
+  }
+  turnCounter++;
 };
 
 const addHandlers = () => {
-  $('.square').on('click', onSquareClick);
+  $('.square').on('click', player);
 
 };
 
@@ -32,8 +40,8 @@ const addHandlers = () => {
 
 
 module.exports = {
-  onSquareClick,
+  // onSquareClick,
   addHandlers,
-
+  player
 
 };

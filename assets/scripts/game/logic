@@ -1,14 +1,7 @@
 "use strict";
 
-// need a function to check if there's a win horizontally, vertically or diagonally
-//if none of the above then tie.
-
-// winning combos
-// horizontally - [0,1,2], [3,4,5], [6,7,8]
-// vertically - [0,3,6], [1,4,7], [2,5,8]
-// diagonally - [0,4,6], [2,4,6]
 const board = ['','','','','','','','',''];
-// let turnCounter = 0;
+
 
 const validMove = function (move) {
   if (move !== 'o' && move !== 'x') {
@@ -18,7 +11,6 @@ const validMove = function (move) {
   }
 
 };
-
 
 const winRow = function(currentBoard) {
   // checks for winning row combo
@@ -54,15 +46,15 @@ const winDiagonal = function(currentBoard) {
   }
 };
 
-const display_input = function(square){
-    if (player_one === 1){
-        document.getElementById(square).innerHTML = "X";
-        player_one = 0;
-    } else {
-        document.getElementById(square).innerHTML = "O";
-        player_one = 1;
-    }
-};
+// const display_input = function(square){
+//     if (player_one === 1){
+//         document.getElementById(square).innerHTML = "X";
+//         player_one = 0;
+//     } else {
+//         document.getElementById(square).innerHTML = "O";
+//         player_one = 1;
+//     }
+// };
 
 // need to figure this out
 
@@ -82,5 +74,7 @@ module.exports = {
   winRow,
   winColumn,
   winDiagonal,
-  display_input
+  // display_input,
+  // turnCounter,
+  // player
 };
