@@ -1,47 +1,31 @@
 "use strict";
 
 // const api = require('./gameApi');
-// const ui = require('./gameUi');
- const logic = require('./logic');
+// const ui = require('./gameUi.js');
+ const logic = require('./logic.js');
 
 //Player interactivity
 
-// const onSquareClick = function (event) {
-//   event.preventDefault();
-//     logic.player(event);
-// };
 
-let turnCounter = 0;
-
-const player = function (event) {
+const onSquareClick = function (event) {
   event.preventDefault();
-  if (turnCounter % 2 === 0) {
-    $(this).text('X');
-  } else {
-    $(this).text('O');
-  }
-  turnCounter++;
+  let squareClicked = event.target.id;
+  logic.validMove(squareClicked);
+  // now need to add in game logic for winning conditions
+  // ui.updateSquare(squareClicked);
 };
+
 
 const addHandlers = () => {
-  $('.square').on('click', player);
+  $('.square').on('click', onSquareClick);
 
 };
-
-  //
-
-//  console.log('click worked');
-    //  logic.validMove(event)
-    //   .done(ui.playerTurn)
-    //   .fail(ui.fail);
-
 
 
 
 
 module.exports = {
-  // onSquareClick,
   addHandlers,
-  player
+  onSquareClick,
 
 };
