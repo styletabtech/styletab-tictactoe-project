@@ -6,6 +6,7 @@ const signInSuccess = (data) => {
   app.user = data.user; // < -- data.user includes id, email and token
 };
 
+//for signing up
 const success = (data) => {
   console.log(data);
 };

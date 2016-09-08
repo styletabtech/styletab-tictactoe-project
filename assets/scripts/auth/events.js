@@ -43,18 +43,18 @@ const addHandlers = () => {
   $('#change-password').on('submit', onChangePassword);
   $('#sign-out').on('submit', onSignOut);
 };
+//MODAL EVENT
+$('#sign-in').on('click', function () {
+  $('#signInModal').modal('show');
+});
+$('#sign-up').on('click', function () {
+  $('#signUpModal').modal('show');
+});
 
-// MODAL EVENT
-// $('#sign-in').on('click', function () {
-//   $('#signInModal').modal('show');
-//
-// });
-//
-// $(document).on('ready', function(){
-// $('#sign-out').hide();
-// $('#change-pw').hide();
-// $('#signInModal').modal('show');
-// });
+$(document).on('ready', function(){
+$('#sign-out').hide();
+$('#change-pw').hide();
+});
 
 
 module.exports = {
