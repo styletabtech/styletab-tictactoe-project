@@ -2,9 +2,9 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
 $background-color: #4e4e4e;
-$font-color: #dfdfdf;
+$font-color: #838ef0;
 $nav-color: #dfdfdf;
-$unit: 30px;
+$unit: 20px;
 $width: (4 * $unit);
 $height: (4 * $unit);
 
@@ -15,26 +15,24 @@ body {
   color: $font-color;
 }
 
-.container {
+
+.board {
   margin: 0 25%;
   text-align: center;
   width: 50%;
 }
 
-.wrapper {
-  margin: 0 24%;
-  text-align: center;
-}
 
-.row > .col-xs-4 {
+.square {
   border: 1px solid;
   box-sizing: border-box;
-  height: $height;
-  padding: 12%;
+//  height: 40%;
+  padding: 14%;
   text-align: center;
-  width: $width;
+//  width: 40%;
 }
 
+//nav buttons
 .btn {
   background-color: $nav-color;
   border: 0;
@@ -54,8 +52,10 @@ body {
 
 .logo {
   background-color: $nav-color;
-  height: 100px;
+  color: $font-color;
+  font-size: 30px;
+  height: 50px;
   margin: 3% 25%;
-  padding: 40px;
+  text-align: center;
   width: 50%;
 };
