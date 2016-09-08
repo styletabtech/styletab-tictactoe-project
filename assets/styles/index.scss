@@ -15,19 +15,18 @@ body {
 
 
 .board {
-  margin: 0 25%;
-  text-align: center;
-  width: 50%;
+  display: inline-block;
+  margin-left: 41%;
 }
-
 
 .square {
   border: 1px solid;
   box-sizing: border-box;
-//  height: 40%;
-  padding: 14%;
+  font-size: 30px;
+  height: 100px;
+  padding: 10%;
   text-align: center;
-//  width: 40%;
+  width: 100px;
 }
 
 //nav buttons
