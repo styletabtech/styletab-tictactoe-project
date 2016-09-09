@@ -4,6 +4,8 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 $background-color: #4e4e4e;
 $font-color: #838ef0;
 $nav-color: #dfdfdf;
+$winner: #e8e4a9;
+$cats-game: #91b6f0;
 $unit: 20px;
 $width: (4 * $unit);
 $height: (4 * $unit);
@@ -56,3 +58,29 @@ body {
   text-align: center;
   width: 50%;
 };
+
+.win-msg {
+  background: $winner;
+  color: $font-color;
+  display: none;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.draw-msg {
+  background: $winner;
+  color: $font-color;
+  display: none;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}

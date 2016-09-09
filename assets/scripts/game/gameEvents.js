@@ -17,9 +17,16 @@ const onSquareClick = function (event) {
   // ui.updateSquare(squareClicked);
 };
 
+const createNewGame = function (event) {
+  event.preventDefault();
+  logic.newGameBoard(event);
+
+};
+
 
 const addHandlers = () => {
   $('.square').on('click', onSquareClick);
+  $('.overlay').on('click', createNewGame);
 
 };
 
@@ -27,5 +34,6 @@ const addHandlers = () => {
 module.exports = {
   addHandlers,
   onSquareClick,
+  createNewGame,
 
 };

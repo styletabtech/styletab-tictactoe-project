@@ -14,7 +14,6 @@
 //         email: 'a@a.com',
 //       }
 // }
-// };
 
 let currentBoard = ['','','','','','','','',''];
 
@@ -54,8 +53,12 @@ const validMove = function (squareClicked) {
 
 };
 
-const clearBoard = function () {
- currentBoard = ['','','','','','','','',''];
+const winMsg = function() {
+  $('.win-msg').show();
+};
+
+const catsGameMsg = function() {
+  $('.draw-msg').show();
 };
 
 const winRow = function () {
@@ -63,9 +66,10 @@ const winRow = function () {
     currentBoard[0] === currentBoard[1] && currentBoard[0] === currentBoard[2] && currentBoard[0] !== '' ||
     currentBoard[3] === currentBoard[4] && currentBoard[3] === currentBoard[5] && currentBoard[3] !== '' ||
     currentBoard[6] === currentBoard[7] && currentBoard[6] === currentBoard[8] && currentBoard[6] !== '') {
-      clearBoard();
+    winMsg();
+
     } else {
-      return false;
+      return null;
 }
 };
 
@@ -74,7 +78,7 @@ const winColumn = function (){
   currentBoard[0] === currentBoard[3] && currentBoard[0] === currentBoard[6] && currentBoard[0] !== '' ||
   currentBoard[1] === currentBoard[4] && currentBoard[1] === currentBoard[7] && currentBoard[1] !== '' ||
   currentBoard[2] === currentBoard[5] && currentBoard[2] === currentBoard[8] && currentBoard[2] !== '') {
-    clearBoard();
+  winMsg();
   } else {
     return null;
   }
@@ -82,7 +86,7 @@ const winColumn = function (){
 
 const catsGame = function () {
   if (turnCount > 8 && $(this).val() !== '') {
-    clearBoard();
+    catsGameMsg();
   } else {
     return null;
   }
@@ -92,16 +96,24 @@ const winDiagonal = function (){
   if (
   currentBoard[0] === currentBoard[4] && currentBoard[0] === currentBoard[8] && currentBoard[0] !== '' ||
   currentBoard[2] === currentBoard[4] && currentBoard[2] === currentBoard[6] && currentBoard[2] !== '') {
-    clearBoard();
+  winMsg();
   } else {
     catsGame();
   }
 };
 
-const winCheck = function () {
+let winCheck = function () {
   return winRow() || winColumn() || winDiagonal();
 };
 
+const newGameBoard = function (){
+  $('.square').html('');
+  currentBoard = ['','','','','','','','','',];
+  console.log(currentBoard);
+  turnCount = 0;
+  winCheck = false;
+  $('.overlay').hide();
+};
 
 // click handler to calll clear board and the button is in the menu
 
@@ -113,6 +125,6 @@ module.exports = {
   validMove,
   whoseTurn,
   winCheck,
-  clearBoard
+  newGameBoard
 
 };
