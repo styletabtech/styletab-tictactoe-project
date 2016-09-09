@@ -6,24 +6,24 @@ const api = require('./api');
 const ui = require('./ui');
 
 const onSignUp = function (event) {
-  let data = getFormFields(event.target);
   event.preventDefault();
+  let data = getFormFields(event.target);
   api.signUp(data)
   .done(ui.success)
   .fail(ui.failure);
 };
 
 const onSignIn = function (event) {
-  let data = getFormFields(event.target);
   event.preventDefault();
+  let data = getFormFields(event.target);
   api.signIn(data)
   .done(ui.signInSuccess)
   .fail(ui.failure);
 };
 
 const onChangePassword = function (event) {
-  let data = getFormFields(event.target);
   event.preventDefault();
+  let data = getFormFields(event.target);
   api.changePassword(data)
   .done(ui.changePasswordSuccess)
   .fail(ui.failure);
@@ -38,24 +38,29 @@ const onSignOut =  function (event) {
 
 
 const addHandlers = () => {
-  $('#sign-up').on('submit', onSignUp);
-  $('#sign-in').on('submit', onSignIn);
-  $('#change-password').on('submit', onChangePassword);
-  $('#sign-out').on('submit', onSignOut);
-};
+//   $('#sign-up').on('submit', onSignUp);
+//   $('#sign-in').on('submit', onSignIn);
+//   $('#change-password').on('submit', onChangePassword);
+//   $('#sign-out').on('submit', onSignOut);
+//
 //MODAL EVENT
-$('#sign-in').on('click', function () {
-  $('#signInModal').modal('show');
-});
-$('#sign-up').on('click', function () {
+$('#sign-up-nav').on('click', function () {
   $('#signUpModal').modal('show');
 });
+$('#sign-up').on('submit', onSignUp);
+
+$('#sign-in-nav').on('click', function () {
+  $('#signInModal').modal('show');
+});
+
+$('#sign-in').on('submit', onSignIn);
 
 $(document).on('ready', function(){
 $('#sign-out').hide();
 $('#change-pw').hide();
 });
 
+};
 
 module.exports = {
   addHandlers,

@@ -3,7 +3,7 @@
 const app = require('../app');
 
 const signUp = (data) => {
-  //console.log(data); // to check if this is working
+//  console.log(data);// to check if this is working
   return $.ajax({
     url: app.host + '/sign-up',
     method: 'POST',
@@ -12,7 +12,7 @@ const signUp = (data) => {
 };
 
 const signIn = (data) => {
-  //console.log(data); // to check if this is working
+//  console.log(data); // to check if this is working
   return $.ajax({
     url: app.host + '/sign-in',
     method: 'POST',
@@ -22,7 +22,7 @@ const signIn = (data) => {
 
 const changePassword = (data) => {
   return $.ajax({
-    url: app.host + '/change-password/' + app.user.id, // basically saying http://localhost:3000/change-password/4  we can use app.user.id because we're signed in and have the unique token
+    url: app.host + '/change-password/' + app.user.id,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + app.user.token,
