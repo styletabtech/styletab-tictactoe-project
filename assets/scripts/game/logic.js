@@ -1,6 +1,7 @@
 "use strict";
 
-const game = {
+let currentGame = {
+  game: {
       id: 0,
       cells: ["","","","","","","","",""],
       over: null,
@@ -12,9 +13,10 @@ const game = {
         id: '0',
         email: 'a@a.com',
       }
+}
 };
 
-const board = ['','','','','','','','',''];
+let currentBoard = ['','','','','','','','',''];
 
 let turnCount = 0;
 
@@ -42,77 +44,58 @@ const whoseTurn = function (squareClicked) {
        $('#' + squareClicked).html('x');
        let index = $('#' + squareClicked).data("id");
        turnCounter();
-       board[index] = 'x';
-       console.log(board);
+       currentBoard[index] = 'x';
+       console.log(currentBoard);
   }
     else {
       $('#' + squareClicked).html('o');
       let index = $('#' + squareClicked).data("id");
       turnCounter();
-      board[index] = 'o';
-      console.log(board);
+      currentBoard[index] = 'o';
+      console.log(currentBoard);
     }
 };
 
 const gameOver = function () {
-  if ($('.board').find('#cell').html() !== '') {
 
-  }
+if
+(currentBoard[0] === currentBoard[1] && currentBoard[0] === currentBoard[2] && currentBoard[0] !== '' ||
+currentBoard[3] === currentBoard[4] && currentBoard[3] === currentBoard[5] && currentBoard[3] !== '' ||
+currentBoard[6] === currentBoard[7] && currentBoard[6] === currentBoard[8] && currentBoard[6] !== '' ||
+currentBoard[0] === currentBoard[3] && currentBoard[0] === currentBoard[6] && currentBoard[0] !== '' ||
+currentBoard[1] === currentBoard[4] && currentBoard[1] === currentBoard[7] && currentBoard[1] !== '' ||
+currentBoard[2] === currentBoard[5] && currentBoard[2] === currentBoard[8] && currentBoard[2] !== '' ||
+currentBoard[0] === currentBoard[4] && currentBoard[0] === currentBoard[8] && currentBoard[0] !== '' ||
+currentBoard[2] === currentBoard[4] && currentBoard[2] === currentBoard[6] && currentBoard[2] !== '') {
+console.log('winner!'); // add in winner / game clear function
+
+// gameClear();
+
+} else if (currentBoard.indexOf('') >= -9 ) {
+  console.log('draw!');
+
+
+  // gameTie();
+  // gameClear();
+}
+
+
+// else {
+//   return false;
+// }
+
 };
 
-const winRow = function(currentBoard) {
-  // checks for winning row combo
-    for (let i = 0; i < board.length; i += 3) {
-      if(currentBoard[i] === currentBoard[i + 1] &&
-        currentBoard[i] === currentBoard[i + 2]) {
-        return console.log('win'); // add in winning statement function
-      }
-  }
-};
 
-const winColumn = function(currentBoard) {
-  // checks for winning column combo
-    for (let i = 0; i < board.length; i += 3) {
-      if(currentBoard[i] === currentBoard[i + 3] &&
-        currentBoard[i] === currentBoard[i + 6]) {
-        return console.log('win'); // add in winning statement function
-    }
-  }
-};
 
-const winDiagonal = function(currentBoard) {
-  // checks for winning diagonal combo
-    for (let i = 0; i < board.length; i += 3) {
-      if(currentBoard[i] === currentBoard[i + 4] &&
-        currentBoard[i] === currentBoard[i + 8]) {
-        return console.log('win'); // add in winning function
-    }
-      else if (currentBoard[2] === currentBoard[4] &&
-        currentBoard[2] === currentBoard[6]) {
-        return console.log('win'); // add in winning statement function
-    }
-  }
-};
 
-// need to figure this out
 
-// const tie = function(currentBoard) {
-//   // checks for tie
-//   for (let i = 0; i < board.length; i++) {
-//     if(currentBoard[i] === currentBoard[1] &&
-//       currentBoard[i] === currentBoard[]) {
-//       return console.log('tie'); // add in tie statement function
-//     }
-//   }
-// };
 
 module.exports = {
-  board,
+  currentBoard,
   turnCount,
   validMove,
-  winRow,
-  winColumn,
-  winDiagonal,
   whoseTurn,
+  gameOver
 
 };
