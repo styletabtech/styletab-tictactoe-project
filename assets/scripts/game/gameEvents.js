@@ -12,7 +12,7 @@ const onSquareClick = function (event) {
   let squareClicked = event.target.id;
   logic.validMove(squareClicked);
   logic.gameOver(squareClicked);
-  console.log('squarClicked is', squareClicked);
+  
   // now need to add in game logic for winning conditions
   // ui.updateSquare(squareClicked);
 };
