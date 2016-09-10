@@ -7,15 +7,18 @@
 
 
  // const api = require('./gameApi');
-// const ui = require('./gameUi.js');
+ const ui = require('./gameUi.js');
  const logic = require('./logic.js');
 
 //Player interactivity
 
 const onSquareClick = function (event) {
+  console.log('onSquareClick runs');
   let squareClicked = event.target.id;
+  console.log('SC' + event.target.id);
   logic.validMove(squareClicked);
   logic.winCheck(squareClicked);
+
   // createNewGame();
   // api.updateGame();
 
@@ -24,6 +27,8 @@ const onSquareClick = function (event) {
 };
 
 const createNewGame = function (event) {
+  console.log('createNewGame');
+  ui.onMinimize();
   logic.newGameBoard(event);
   //onSquareClick();
   // api.newGame();
@@ -31,9 +36,8 @@ const createNewGame = function (event) {
 };
 
 const addHandlers = () => {
+  $('#new-game').on('click', createNewGame); //add in new game function//);
   $('.square').on('click', onSquareClick);
-  $('.overlay').on('click', createNewGame);
-  $('#new-game').on('click'); //add in new game function//);
 
 };
 
