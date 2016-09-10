@@ -21,7 +21,7 @@ let turnCount = 0;
 
 const turnCounter = function () {
   turnCount++;
-  console.log(turnCount);
+//  console.log(turnCount);
 };
 
 const whoseTurn = function (squareClicked) {
@@ -44,9 +44,6 @@ const whoseTurn = function (squareClicked) {
 const validMove = function (squareClicked) {
   if ($('#' + squareClicked).html() === '') {
     whoseTurn(squareClicked);
-  // if (value === 'o' || value === 'x') {
-    // true       |   |  true
-    // console.log('this is not a valid square', value);
    } else {
     return null;
   }
@@ -109,7 +106,7 @@ let winCheck = function () {
 const newGameBoard = function (){
   $('.square').html('');
   currentBoard = ['','','','','','','','','',];
-  console.log(currentBoard);
+  // console.log(currentBoard);
   turnCount = 0;
   winCheck = false;
   $('.overlay').hide();
