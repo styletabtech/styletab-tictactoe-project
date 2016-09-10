@@ -6,7 +6,7 @@
 // request needs to be sent. finally, need to GET total games won by a user
 
 
- // const api = require('./gameApi');
+ const api = require('./gameApi');
  const ui = require('./gameUi.js');
  const logic = require('./logic.js');
 
@@ -18,9 +18,7 @@ const onSquareClick = function (event) {
   console.log('SC' + event.target.id);
   logic.validMove(squareClicked);
   logic.winCheck(squareClicked);
-
-  // createNewGame();
-  // api.updateGame();
+//  api.updateGame();
 
   // now need to add in game logic for winning conditions
   // ui.updateSquare(squareClicked);
@@ -30,8 +28,10 @@ const createNewGame = function (event) {
   console.log('createNewGame');
   ui.onMinimize();
   logic.newGameBoard(event);
-  //onSquareClick();
-  // api.newGame();
+  api.newGame(event)
+    .done(ui.onSuccess)
+    .fail(ui.onError);
+
 
 };
 
