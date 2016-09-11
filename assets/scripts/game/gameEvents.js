@@ -13,30 +13,33 @@
 //Player interactivity
 
 const onSquareClick = function (event) {
+  event.preventDefault();
   console.log('onSquareClick runs');
   let squareClicked = event.target.id;
   console.log('SC' + event.target.id);
   logic.validMove(squareClicked);
   logic.winCheck(squareClicked);
-//  api.updateGame();
-
-  // now need to add in game logic for winning conditions
-  // ui.updateSquare(squareClicked);
+  let index = $('#' + squareClicked).data("id");
+  let value = $('#' + squareClicked).html();
+  api.updateGame(index, value, logic.gameOver);
+  console.log(index, value, logic.gameOver)
+    .done(ui.onSuccess)
+    .fail(ui.onError);
 };
 
 const createNewGame = function (event) {
+  event.preventDefault();
   console.log('createNewGame');
   ui.onMinimize();
-  logic.newGameBoard(event);
-  api.newGame(event)
+  logic.newGameBoard();
+  api.newGame()
     .done(ui.onSuccess)
     .fail(ui.onError);
-
 
 };
 
 const addHandlers = () => {
-  $('#new-game').on('click', createNewGame); //add in new game function//);
+  $('#new-game').on('click', createNewGame);
   $('.square').on('click', onSquareClick);
 
 };

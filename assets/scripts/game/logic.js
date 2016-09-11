@@ -1,23 +1,25 @@
 "use strict";
 
+let turnCount = 0;
+let currentBoard = ['','','','','','','','',''];
+let gameOver = false;
 // let currentGame = {
 //   game: {
-//       id: 0,
+//       id: '',
 //       cells: ["","","","","","","","",""],
 //       over: false,
 //       player_x: {
-//         id: '0',
-//         email: 'a@gmail.com',
+//         id: '',
+//         email: '',
 //       },
 //       player_o: {
-//         id: '0',
-//         email: 'a@a.com',
+//         id: '',
+//         email: '',
+//
 //       }
 // }
+// };
 
-let currentBoard = ['','','','','','','','',''];
-
-let turnCount = 0;
 
 const turnCounter = function () {
   console.log('turnCounter is running');
@@ -31,9 +33,11 @@ const whoseTurn = function (squareClicked) {
   if (turnCount % 2 === 0) {
        $('#' + squareClicked).html('x');
        let index = $('#' + squareClicked).data("id");
+       console.log('index is', index);
        turnCounter();
        currentBoard[index] = 'x';
        console.log(currentBoard);
+
   }
     else {
       $('#' + squareClicked).html('o');
@@ -41,7 +45,10 @@ const whoseTurn = function (squareClicked) {
       turnCounter();
       currentBoard[index] = 'o';
       console.log(currentBoard);
+      console.log(index);
+
     }
+
 };
 
 const validMove = function (squareClicked) {
@@ -58,13 +65,18 @@ const winMsg = function(){
   console.log('winmsg is running');
   if (turnCount % 2 === 0) {
   $('.win-msg-o').show();
+  gameOver = true;
 } else {
   $('.win-msg-x').show();
+  gameOver = true;
+  console.log(gameOver);
 }
+
 };
 
 const catsGameMsg = function() {
   $('.draw-msg').show();
+  gameOver = true;
 };
 
 const winRow = function () {
@@ -119,16 +131,12 @@ let winCheck = function () {
 const newGameBoard = function (){
   console.log("newGameBoard is running");
   $('.square').html('');
-  currentBoard = ['','','','','','','','',''];
-  console.log(currentBoard);
   turnCount = 0;
-  // winCheck = false;
-
+  gameOver = false;
 };
 
 // click handler to calll clear board and the button is in the menu
-
-// reassigning currentboard to an empty array
+// reassigning currentGame to an empty array
 
 module.exports = {
   currentBoard,
@@ -136,6 +144,9 @@ module.exports = {
   validMove,
   whoseTurn,
   winCheck,
-  newGameBoard
+  newGameBoard,
+  gameOver
+
+  // data
 
 };

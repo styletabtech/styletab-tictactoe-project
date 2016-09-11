@@ -2,15 +2,17 @@
 
 const app = require('../app');
 
-const newGame = (data) => {
-  console.log(data); // to check if this is working
+const newGame = () => {
+  console.log(); // to check if this is working
    return $.ajax({
     url: app.host + '/games',
     method: 'POST',
     headers: {
       Authorization: 'Token token=' + app.user.token,
     },
-    // data: {
+  //   data,
+
+     // {
     //   "game": {
     //     "id": "",
     //     "cells": ["","","","","","","","",""],
@@ -26,28 +28,28 @@ const newGame = (data) => {
   });
 };
 
-// const updateGame = function(i,v,g){
-//   return $.ajax({
-//     method: 'PATCH',
-//     url: app.host + '/games/' + app.game.id,
-//     headers: {
-//       Authorization: 'Token token=' + app.game.token,
-//     },
-//     data: {
-//      "game": {
-//        "cell": {
-//          "index": i,
-//          "value": v
-//        },
-//        "over": g
-//      }
-//     }
-//   });
-// };
-
+const updateGame = function(index, value, game) {
+  console.log(index, value, game);
+  return $.ajax({
+    method: 'PATCH',
+    url: app.host + '/games/'+ app.game.id,
+    headers: {
+      Authorization: 'Token token=' + app.game.token,
+    },
+    data: {
+     "game": {
+       "cell": {
+         "index": index,
+         "value": value,
+       },
+       "over": game
+     }
+    }
+  });
+};
 
 
 module.exports = {
 newGame,
-//updateGame,
+updateGame,
 };
