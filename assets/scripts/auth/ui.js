@@ -12,11 +12,11 @@ const success = (data) => {
 };
 
 const failure = () => {
-//  console.log(error);
 };
 
-const changePasswordSuccess = function () {
-//  console.log('password successfully changed');
+const changePasswordSuccess = function (data) {
+  app.user = data.user;
+  // console.log('password successfully changed');
 
 };
 
