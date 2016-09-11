@@ -20,7 +20,6 @@ let gameOver = false;
 // }
 // };
 
-
 const turnCounter = function () {
   console.log('turnCounter is running');
   turnCount++;
@@ -131,6 +130,7 @@ let winCheck = function () {
 const newGameBoard = function (){
   console.log("newGameBoard is running");
   $('.square').html('');
+  currentBoard = ['','','','','','','','',''];
   turnCount = 0;
   gameOver = false;
 };
