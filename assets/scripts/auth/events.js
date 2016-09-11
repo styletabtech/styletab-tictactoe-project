@@ -17,7 +17,7 @@ const onSignIn = function (event) {
   event.preventDefault();
   let data = getFormFields(event.target);
   api.signIn(data)
-  .done(ui.signInSuccess)
+  .done(ui.success)
   .fail(ui.failure);
 };
 
@@ -31,33 +31,38 @@ const onChangePassword = function (event) {
 
 const onSignOut =  function (event) {
   event.preventDefault();
-  api.signOut()
+  let data = getFormFields(event.target);
+  api.signOut(data)
   .done(ui.signOutSuccess)
   .fail(ui.failure);
 };
 
 
 const addHandlers = () => {
-//   $('#sign-up').on('submit', onSignUp);
-//   $('#sign-in').on('submit', onSignIn);
-//   $('#change-password').on('submit', onChangePassword);
-//   $('#sign-out').on('submit', onSignOut);
-//
-//MODAL EVENT
+  //sign up
 $('#sign-up-nav').on('click', function () {
   $('#signUpModal').modal('show');
 });
 $('#sign-up').on('submit', onSignUp);
 
+// sign in
 $('#sign-in-nav').on('click', function () {
   $('#signInModal').modal('show');
 });
-
 $('#sign-in').on('submit', onSignIn);
 
+//change pw
+$('#change-pw-nav').on('click', function () {
+  $('#changePwModal').modal('show');
+});
+$('#change-pw').on('submit', onChangePassword);
+
+// sign out
+$('#sign-out-nav').on('submit', onSignOut);
+
 $(document).on('ready', function(){
-$('#sign-out').hide();
-$('#change-pw').hide();
+// $('#sign-out-nav').hide();
+// $('#change-pw-nav').hide();
 });
 
 };

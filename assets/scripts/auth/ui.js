@@ -3,26 +3,26 @@
 const app = require('../app');
 
 const signInSuccess = (data) => {
-  app.user = data.user; // < -- data.user includes id, email and token
+  app.user = data.user;
 };
 
 //for signing up
 const success = (data) => {
-  console.log(data);
+  app.user = data.user;
 };
 
-const failure = (error) => {
-  console.log(error);
+const failure = () => {
+//  console.log(error);
 };
 
 const changePasswordSuccess = function () {
-  console.log('password successfully changed');
+//  console.log('password successfully changed');
 
 };
 
 const signOutSuccess = function () {
-  app.user = null; // this will be null because you want to wipe the user object clean (this is a best practice)
-  console.log('successfully signed out');
+  app.user = null;
+//  console.log('successfully signed out');
 };
 
 module.exports = {

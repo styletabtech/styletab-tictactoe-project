@@ -8,8 +8,8 @@
   </head>
     <body class="container-fluid">
       <nav class="navbar">
-        <button type="button" id="sign-out" class="btn btn-default navbar-btn">Sign Out</button>
-        <button type="button" id="change-pw" class="btn btn-default navbar-btn">Change Password</button>
+        <button type="button" id="sign-out-nav" class="btn btn-default navbar-btn">Sign Out</button>
+        <button type="button" id="change-pw-nav" class="btn btn-default navbar-btn">Change Password</button>
         <button type="button" id="sign-in-nav" class="btn btn-default navbar-btn">Sign In</button>
         <button type="button" id="sign-up-nav" class="btn btn-default navbar-btn">Sign Up</button>
         <button type="button" id="new-game" class="btn btn-default navbar-btn">New Game</button>
@@ -90,5 +90,28 @@
           </div>
         </div>
 
-    </body>
+  <!-- Change PW Modal -->
+
+  <div class="modal fade" id="changePwModal" tabindex="-1" role="dialog"
+  aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"
+          aria-label="Close"><span aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title" id="myModalLabel">Change Password</h4>
+        </div>
+        <div class="modal-body">
+          <form id="change-pw">
+            <input name="passwords[old]" type="password" placeholder="Old Password">
+            <input name="passwords[new]" type="password" placeholder="New Password">
+            <input type="submit" class="btn btn-primary" id="change-pw-button">
+          </form>
+        </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
 </html>
