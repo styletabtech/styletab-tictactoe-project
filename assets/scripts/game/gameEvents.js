@@ -32,7 +32,8 @@ const createNewGame = function (event) {
   console.log('createNewGame');
   ui.onMinimize();
   logic.newGameBoard();
-  api.newGame()
+  let data = {};
+  api.newGame(data)
     .done(ui.onSuccess)
     .fail(ui.onError);
 

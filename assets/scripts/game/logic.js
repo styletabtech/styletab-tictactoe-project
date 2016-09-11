@@ -135,9 +135,6 @@ const newGameBoard = function (){
   gameOver = false;
 };
 
-// click handler to calll clear board and the button is in the menu
-// reassigning currentGame to an empty array
-
 module.exports = {
   currentBoard,
   turnCount,

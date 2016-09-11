@@ -10,21 +10,6 @@ const newGame = () => {
     headers: {
       Authorization: 'Token token=' + app.user.token,
     },
-  //   data,
-
-     // {
-    //   "game": {
-    //     "id": "",
-    //     "cells": ["","","","","","","","",""],
-    //     "over": false,
-    //     "player_x": {
-    //       "id": "",
-    //       "email": ""
-    //     },
-    //     "player_o": null
-    //   }
-    // }
-
   });
 };
 

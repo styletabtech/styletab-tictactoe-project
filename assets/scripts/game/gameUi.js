@@ -1,6 +1,6 @@
 'use strict';
 
-//const app = require('../app');
+const app = require('../app');
 
 const onMinimize = function () {
   $('.win-msg-x').hide();
@@ -9,14 +9,11 @@ const onMinimize = function () {
 
 };
 
-
-const onSuccess = function (data) {
-  if (data.game) {
-    console.log(data.game);
-  } else {
-    console.table(data.game);
-  }
+ const onSuccess = function (data) {
+  app.game = data.game;
+  console.log(app);
 };
+
 
 const onError = function (response) {
   console.error(response);
