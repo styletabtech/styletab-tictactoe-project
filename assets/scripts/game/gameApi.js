@@ -15,11 +15,12 @@ const newGame = () => {
 
 const updateGame = function(index, value, game) {
   console.log(index, value, game);
+  console.log('app is', app);
   return $.ajax({
     method: 'PATCH',
     url: app.host + '/games/'+ app.game.id,
     headers: {
-      Authorization: 'Token token=' + app.game.token,
+      Authorization: 'Token token=' + app.user.token,
     },
     data: {
      "game": {
@@ -27,7 +28,7 @@ const updateGame = function(index, value, game) {
          "index": index,
          "value": value,
        },
-       "over": game
+       "over": game,
      }
     }
   });

@@ -22,9 +22,9 @@ const onSquareClick = function (event) {
   let index = $('#' + squareClicked).data("id");
   let value = $('#' + squareClicked).html();
   api.updateGame(index, value, logic.gameOver);
-  console.log(index, value, logic.gameOver)
-    .done(ui.onSuccess)
-    .fail(ui.onError);
+//  console.log(index, value, logic.gameOver);
+    // .done(ui.onUpdateSuccess)
+    // .fail(ui.onError);
 };
 
 const createNewGame = function (event) {

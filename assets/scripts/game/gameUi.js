@@ -19,11 +19,17 @@ const onError = function (response) {
   console.error(response);
 };
 
+const onUpdateSuccess = function (data) {
+ app.game = data.game;
+ console.log(app);
+};
+
 
 
 module.exports = {
   onMinimize,
   onSuccess,
   onError,
+  onUpdateSuccess
 
 };
