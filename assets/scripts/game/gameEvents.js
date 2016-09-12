@@ -20,6 +20,7 @@ const onSquareClick = function (event) {
 };
 
 const createNewGame = function (event) {
+  console.log();
   event.preventDefault();
   ui.onMinimize();
   logic.newGameBoard();

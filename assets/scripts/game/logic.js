@@ -6,28 +6,21 @@ let gameOver = false;
 
 const turnCounter = function () {
   turnCount++;
-
 };
 
 const whoseTurn = function (squareClicked) {
   if (turnCount % 2 === 0) {
        $('#' + squareClicked).html('x');
        let index = $('#' + squareClicked).data("id");
-
        turnCounter();
        currentBoard[index] = 'x';
-
-
   }
     else {
       $('#' + squareClicked).html('o');
       let index = $('#' + squareClicked).data("id");
       turnCounter();
       currentBoard[index] = 'o';
-
-
     }
-
 };
 
 const validMove = function (squareClicked) {
@@ -36,7 +29,6 @@ const validMove = function (squareClicked) {
    } else {
     return null;
   }
-
 };
 
 const winMsg = function(){
@@ -48,9 +40,7 @@ const winMsg = function(){
 } else {
   $('.win-msg-x').show();
   gameOver = true;
-
 }
-
 };
 
 const catsGameMsg = function() {
@@ -96,7 +86,7 @@ const winDiagonal = function (){
   currentBoard[0] === currentBoard[4] && currentBoard[0] === currentBoard[8] && currentBoard[0] !== '' ||
   currentBoard[2] === currentBoard[4] && currentBoard[2] === currentBoard[6] && currentBoard[2] !== '') {
   winMsg();
-  
+
   } else {
     catsGame();
   }
