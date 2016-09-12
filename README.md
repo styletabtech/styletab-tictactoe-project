@@ -4,13 +4,26 @@
 
 <h2>Project 1 for WDI 14</h2>
 
+<h3>Let's Play: </h3> https://styletab.github.io/styletab-tictactoe-project/
+
 <h3>Wireframe (desktop & mobile):</h3> https://app.moqups.com/katherinetab@gmail.com/U9jeEt2UEw/view/page/a349ccaa7
 
-<h3>My process: </h3>
+<h3>Technologies Used </h3>: HTML, CSS, JavaScript, Bootstrap, AJAX, Sass
 
-<h3>Technologies Used </h3>
-<h3>URL: </h3> https://styletab.github.io/styletab-tictactoe-project/
 <h3>My process: </h3>
+<ul>
+<li>First, I mocked up my wireframe on paper and then transferred it into a digital format</li>
+<li>Next, I wrote down general user stories.</li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
 
 <h3>Unfinished Business: </h3>
 <ul>
