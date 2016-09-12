@@ -4,6 +4,7 @@ const app = require('../app');
 
 const signInSuccess = (data) => {
   app.user = data.user;
+  console.log(data);
 };
 
 //for signing up
@@ -14,15 +15,16 @@ const success = (data) => {
 const failure = () => {
 };
 
-const changePasswordSuccess = function (data) {
+const changePasswordSuccess = (data) => {
+//  console.log(data);
   app.user = data.user;
-  // console.log('password successfully changed');
+  console.log('password successfully changed');
 
 };
 
-const signOutSuccess = function () {
+const signOutSuccess = () => {
   app.user = null;
-//  console.log('successfully signed out');
+  console.log('successfully signed out');
 };
 
 module.exports = {
