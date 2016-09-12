@@ -8,6 +8,13 @@
 
 <h3>Wireframe (desktop & mobile):</h3> https://app.moqups.com/katherinetab@gmail.com/U9jeEt2UEw/view/page/a349ccaa7
 
+<h3>User Stories</h3> 
+<li>As a user, I want to sign up so I can keep track of my wins.</li>
+<li>As a user, I want to play tic tac toe with another play so I can win.</li>
+<li>As a user, I want to sign in so I can see how many games I’ve won.</li>
+<li>As a user, I want to sign out so I can ensure no one else plays on my account.</li>
+<li>As a user, I want to play tic tac toe because it’s easy to learn and requires strategy.</li>
+
 <h3>Technologies Used</h3> 
 HTML, CSS, JavaScript, Bootstrap, AJAX, Sass
 
