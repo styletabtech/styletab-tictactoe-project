@@ -8,21 +8,21 @@
 
 <h3>Wireframe (desktop & mobile):</h3> https://app.moqups.com/katherinetab@gmail.com/U9jeEt2UEw/view/page/a349ccaa7
 
-<h3>Technologies Used </h3>: HTML, CSS, JavaScript, Bootstrap, AJAX, Sass
+<h3>Technologies Used</h3>: 
+HTML, CSS, JavaScript, Bootstrap, AJAX, Sass
 
 <h3>My process: </h3>
 <ul>
-<li>First, I mocked up my wireframe on paper and then transferred it into a digital format</li>
-<li>Next, I wrote down general user stories.</li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li>Mocked up my wireframe on paper and then transferred it into a digital format</li>
+<li>Wrote down general user stories.</li>
+<li>Wrote down problems that needed to be solved and then broke them down even further to create workflow schedule. </li>
+<li>Created a simple interface that included a game board, header and nav.</li>
+<li>Wrote player interactivity code - allowing players to mark and x or an o on the board.</li>
+<li>Worked on the game logic and implemented a turn counter and code to check for a win by either player.</li>
+<li>Created a new game button to clear the board and make an Ajax call to create a new game.</li>
+<li>Wrote Ajax call so that when a player signs up, a new user is created.</li>
+<li>Wrote Ajax call that creates a new session for the user and appends a unique token.</li>
+<li> Wrote Ajax call that sends a patch request to update a user's game when they click on a cell of the board.</li>
 </ul>
 
 <h3>Unfinished Business: </h3>
