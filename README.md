@@ -8,7 +8,7 @@
 
 <h3>Wireframe (desktop & mobile):</h3> https://app.moqups.com/katherinetab@gmail.com/U9jeEt2UEw/view/page/a349ccaa7
 
-<h3>Technologies Used</h3>: 
+<h3>Technologies Used</h3> 
 HTML, CSS, JavaScript, Bootstrap, AJAX, Sass
 
 <h3>My process: </h3>
