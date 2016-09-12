@@ -36,6 +36,7 @@ HTML, CSS, JavaScript, Bootstrap, AJAX, Sass
 <ul>
 <li>Fix change password</li>
 <li>Fix sign out</li>
+<li>Fix game state issue that doesn't override global variable when win condition is met</li>
 <li>GET request to retrieve games played</li>
 <li>Update modals to hide once submit button is clicked</li>
 <li>Hide board on page load</li>
