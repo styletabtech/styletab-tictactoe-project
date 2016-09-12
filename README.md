@@ -42,8 +42,9 @@ HTML, CSS, JavaScript, Bootstrap, AJAX, Sass
 <li>Hide board on page load</li>
 <li>Create sign in page to require sign up or sign in</li>
 <li>Hide sign up and sign in buttons once logged in</li>
-<li>Update styling and margins of board to make more repsonsive</li>
+<li>Update styling and margins of board to make more responsive</li>
 <li>Update fonts and colors</li>
+<li>Add in style elements for Taylor vs. Kanye theme</li>
 
 </ul>
 
