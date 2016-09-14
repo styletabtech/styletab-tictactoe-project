@@ -35,19 +35,18 @@ const winMsg = function(){
 
   if (turnCount % 2 === 0) {
   $('.win-msg-o').show();
-  gameOver = true;
+
 
 
 } else {
   $('.win-msg-x').show();
-  gameOver = true;
+
 }
   return true;
 };
 
 const catsGameMsg = function() {
   $('.draw-msg').show();
-  gameOver = true;
   return true;
 };
 
@@ -56,7 +55,8 @@ const winRow = function () {
     currentBoard[0] === currentBoard[1] && currentBoard[0] === currentBoard[2] && currentBoard[0] !== '' ||
     currentBoard[3] === currentBoard[4] && currentBoard[3] === currentBoard[5] && currentBoard[3] !== '' ||
     currentBoard[6] === currentBoard[7] && currentBoard[6] === currentBoard[8] && currentBoard[6] !== '') {
-      winMsg();
+    gameOver = true;
+    winMsg();
 
     } else {
       return null;
@@ -68,6 +68,7 @@ const winColumn = function (){
   currentBoard[0] === currentBoard[3] && currentBoard[0] === currentBoard[6] && currentBoard[0] !== '' ||
   currentBoard[1] === currentBoard[4] && currentBoard[1] === currentBoard[7] && currentBoard[1] !== '' ||
   currentBoard[2] === currentBoard[5] && currentBoard[2] === currentBoard[8] && currentBoard[2] !== '') {
+  gameOver = true;
   winMsg();
 
   } else {
@@ -77,6 +78,7 @@ const winColumn = function (){
 
 const catsGame = function () {
   if (turnCount > 8 && $(this).val() !== '') {
+    gameOver = true;
     catsGameMsg();
 
   } else {
@@ -88,6 +90,7 @@ const winDiagonal = function (){
   if (
   currentBoard[0] === currentBoard[4] && currentBoard[0] === currentBoard[8] && currentBoard[0] !== '' ||
   currentBoard[2] === currentBoard[4] && currentBoard[2] === currentBoard[6] && currentBoard[2] !== '') {
+  gameOver = true;
   winMsg();
 
   } else {

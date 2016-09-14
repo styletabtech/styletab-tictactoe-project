@@ -34,11 +34,13 @@ const newGame = () => {
 };
 
 const getTotalGames = () => {
+  console.log('getTotalGames is running');
   return $.ajax({
     url: app.host + '/games',
     method: 'GET',
-
-  });
+    Authorization: 'Token token=' + app.user.token,
+  }
+  );
 
 
 

@@ -46,17 +46,30 @@ $('#sign-up-nav').on('click', function () {
 });
 $('#sign-up').on('submit', onSignUp);
 
+$('#sign-up').on('submit', function(){
+  $('#signUpModal').modal('hide');
+});
+
+
 // sign in
 $('#sign-in-nav').on('click', function () {
   $('#signInModal').modal('show');
 });
 $('#sign-in').on('submit', onSignIn);
 
+$('#sign-in').on('submit', function(){
+  $('#signInModal').modal('hide');
+});
+
 //change pw
 $('#change-pw-nav').on('click', function () {
   $('#changePwModal').modal('show');
 });
 $('#change-pw').on('submit', onChangePassword);
+
+$('#change-pw').on('submit', function(){
+  $('#changePwModal').modal('hide');
+});
 
 // sign out
 $('#sign-out-nav').on('click', onSignOut);
