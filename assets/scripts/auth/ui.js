@@ -18,8 +18,8 @@ const failure = (error) => {
   console.log('error is', error);
 };
 
-const changePasswordSuccess = (data) => {
-  console.log(data.user);
+const changePasswordSuccess = () => {
+  // console.log(data.user);
   // app.user = data.user;
   console.log('password successfully changed');
 
