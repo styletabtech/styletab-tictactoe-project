@@ -59,7 +59,7 @@ $('#change-pw-nav').on('click', function () {
 $('#change-pw').on('submit', onChangePassword);
 
 // sign out
-$('#sign-out-nav').on('submit', onSignOut);
+$('#sign-out-nav').on('click', onSignOut);
 
 $(document).on('ready', function(){
 // $('#sign-out-nav').hide();
