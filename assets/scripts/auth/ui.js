@@ -4,7 +4,8 @@ const app = require('../app');
 
 const signInSuccess = (data) => {
   app.user = data.user;
-  console.log(data);
+  console.log(data.user);
+  console.log("hi");
 };
 
 //for signing up
@@ -12,12 +13,14 @@ const success = (data) => {
   app.user = data.user;
 };
 
-const failure = () => {
+const failure = (error) => {
+
+  console.log('error is', error);
 };
 
 const changePasswordSuccess = (data) => {
-//  console.log(data);
-  app.user = data.user;
+  console.log(data.user);
+  // app.user = data.user;
   console.log('password successfully changed');
 
 };
