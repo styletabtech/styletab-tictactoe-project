@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Example</title>
+    <title>Tic Tac Taylor</title>
 
     <script src="vendor.bundle.js" type="text/javascript" charset="utf-8" defer></script>
     <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
@@ -10,13 +10,14 @@
       <nav class="navbar">
         <button type="button" id="sign-out-nav" class="btn btn-default navbar-btn">Sign Out</button>
         <button type="button" id="change-pw-nav" class="btn btn-default navbar-btn">Change Password</button>
+        <button type="button" id="total-games-nav" class="btn btn-default navbar-btn">History</button>
         <button type="button" id="sign-in-nav" class="btn btn-default navbar-btn">Sign In</button>
         <button type="button" id="sign-up-nav" class="btn btn-default navbar-btn">Sign Up</button>
         <button type="button" id="new-game" class="btn btn-default navbar-btn">New Game</button>
       </nav>
 
     <section>
-      <div class="logo">Tic Tac Toe</div>
+      <div class="logo">Tic Tac Taylor vs. Kanye</div>
     </section>
     <div class="board">
       <div class="row">
@@ -40,6 +41,9 @@
       <div class="win-msg-x">X Wins!</div>
       <div class="win-msg-o">O Wins!</div>
       <div class="draw-msg">Cat's Game! Play again?</div>
+      <div class="total-games-msg"> Total games played:
+      <span id="games-played">0</span>
+        </div>
     </div>
 
   <!-- MODAL SECTION -->
