@@ -14,13 +14,12 @@ const onSquareClick = function (event) {
   logic.winCheck(squareClicked);
   let index = $('#' + squareClicked).data("id");
   let value = $('#' + squareClicked).html();
-  api.updateGame(index, value, logic.gameOver);
-    // .done(ui.onUpdateSuccess)
-    // .fail(ui.onError);
+  api.updateGame(index, value, logic.gameOver)
+     .done(ui.onUpdateSuccess)
+     .fail(ui.onError);
 };
 
 const createNewGame = function (event) {
-  console.log();
   event.preventDefault();
   ui.onMinimize();
   logic.newGameBoard();
@@ -31,9 +30,22 @@ const createNewGame = function (event) {
 
 };
 
+const onGetGames = function (event) {
+  event.preventDefault();
+  api.getTotalGames()
+      .done(ui.onShowGamesTotal)
+      .fail(ui.onError);
+};
+
 const addHandlers = () => {
   $('#new-game').on('click', createNewGame);
   $('.square').on('click', onSquareClick);
+  $('#total-games-nav').on('click', onGetGames);
+
+  $(document).on('ready', function(){
+  $('.board').hide();
+
+  });
 
 };
 

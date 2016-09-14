@@ -37,15 +37,18 @@ const winMsg = function(){
   $('.win-msg-o').show();
   gameOver = true;
 
+
 } else {
   $('.win-msg-x').show();
   gameOver = true;
 }
+  return true;
 };
 
 const catsGameMsg = function() {
   $('.draw-msg').show();
   gameOver = true;
+  return true;
 };
 
 const winRow = function () {
@@ -104,6 +107,7 @@ const newGameBoard = function (){
   gameOver = false;
 };
 
+const getTotalGames = function() {};
 
 
 module.exports = {
@@ -114,6 +118,7 @@ module.exports = {
   winCheck,
   newGameBoard,
   gameOver,
+  getTotalGames
 
   // data
 
