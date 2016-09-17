@@ -7,7 +7,6 @@ const onMinimize = function () {
   $('.win-msg-o').hide();
   $('.draw-msg').hide();
   $('.board').show();
-
 };
 
  const onSuccess = function (data) {
@@ -21,10 +20,8 @@ const onError = function (response) {
 };
 
 const onUpdateSuccess = function (data) {
-  console.log(data);
-
- app.game = data.game;
-
+  console.log('onUpdateSuccess is ', data);
+  app.game = data.game;
 };
 
 const onShowGamesTotal = function (data) {
@@ -32,6 +29,7 @@ const onShowGamesTotal = function (data) {
   let totalGames = data.games.length;
   $('#games-total').html(totalGames);
   //.show on the div that will be hiding
+  // .fade for display
 };
 
 
