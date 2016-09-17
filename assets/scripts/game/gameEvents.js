@@ -45,6 +45,7 @@ const addHandlers = () => {
 
   $(document).on('ready', function(){
   $('.board').hide();
+  $('.total-games-msg').hide();
 
   });
 

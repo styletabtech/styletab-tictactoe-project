@@ -11,15 +11,21 @@
         <button type="button" id="sign-out-nav" class="btn btn-default navbar-btn">Sign Out</button>
         <button type="button" id="change-pw-nav" class="btn btn-default navbar-btn">Change Password</button>
         <button type="button" id="total-games-nav" class="btn btn-default navbar-btn">History</button>
-        <button type="button" id="sign-in-nav" class="btn btn-default navbar-btn">Sign In</button>
-        <button type="button" id="sign-up-nav" class="btn btn-default navbar-btn">Sign Up</button>
         <button type="button" id="new-game" class="btn btn-default navbar-btn">New Game</button>
       </nav>
+
+      <section class="welcome-page">
+        <div class="welcome-buttons">
+          <button type="button" id="sign-in-nav" class="btn btn-default navbar-btn">Sign In</button>
+          <button type="button" id="sign-up-nav" class="btn btn-default navbar-btn">Sign Up</button>
+        </div>
+      </section>
 
     <section>
       <div class="logo">Tic Tac Taylor vs. Kanye</div>
     </section>
-    <div class="board">
+
+    <section class="board">
       <div class="row">
         <div class="col-xs-4 square" id='sq0' data-id=0></div>
         <div class="col-xs-4 square" id='sq1' data-id=1></div>
@@ -35,16 +41,16 @@
         <div class="col-xs-4 square" id='sq7' data-id=7></div>
         <div class="col-xs-4 square" id='sq8' data-id=8></div>
       </div>
-    </div>
+    </section>
 
-    <div class="overlay">
+    <section class="overlay">
       <div class="win-msg-x">X Wins!</div>
       <div class="win-msg-o">O Wins!</div>
       <div class="draw-msg">Cat's Game! Play again?</div>
-      <div class="total-games-msg"> Total games played:
-      <span id="games-total">0</span>
+      <div class="total-games-msg"> You've played:
+      <span id="games-total">0</span> games!
         </div>
-    </div>
+    </section>
 
   <!-- MODAL SECTION -->
   <!-- Sign Up Modal -->
