@@ -14,8 +14,8 @@ const whoseTurn = function (squareClicked) {
        let index = $('#' + squareClicked).data("id");
        turnCounter();
        currentBoard[index] = 'x';
-  }
-    else {
+
+  } else {
       $('#' + squareClicked).html('o');
       let index = $('#' + squareClicked).data("id");
       turnCounter();
@@ -32,22 +32,17 @@ const validMove = function (squareClicked) {
 };
 
 const winMsg = function(){
-
   if (turnCount % 2 === 0) {
-  $('.win-msg-o').show();
-
-
-
-} else {
-  $('.win-msg-x').show();
-
+    $('.win-msg-o').show();
+  } else {
+    $('.win-msg-x').show();
 }
-  return true;
+  gameOver = true;
 };
 
 const catsGameMsg = function() {
-  $('.draw-msg').show();
-  return true;
+    $('.draw-msg').show();
+    gameOver = true;
 };
 
 const winRow = function () {
@@ -55,43 +50,39 @@ const winRow = function () {
     currentBoard[0] === currentBoard[1] && currentBoard[0] === currentBoard[2] && currentBoard[0] !== '' ||
     currentBoard[3] === currentBoard[4] && currentBoard[3] === currentBoard[5] && currentBoard[3] !== '' ||
     currentBoard[6] === currentBoard[7] && currentBoard[6] === currentBoard[8] && currentBoard[6] !== '') {
-    gameOver = true;
     winMsg();
 
     } else {
-      return null;
+      return false;
 }
 };
 
 const winColumn = function (){
   if (
-  currentBoard[0] === currentBoard[3] && currentBoard[0] === currentBoard[6] && currentBoard[0] !== '' ||
-  currentBoard[1] === currentBoard[4] && currentBoard[1] === currentBoard[7] && currentBoard[1] !== '' ||
-  currentBoard[2] === currentBoard[5] && currentBoard[2] === currentBoard[8] && currentBoard[2] !== '') {
-  gameOver = true;
-  winMsg();
+    currentBoard[0] === currentBoard[3] && currentBoard[0] === currentBoard[6] && currentBoard[0] !== '' ||
+    currentBoard[1] === currentBoard[4] && currentBoard[1] === currentBoard[7] && currentBoard[1] !== '' ||
+    currentBoard[2] === currentBoard[5] && currentBoard[2] === currentBoard[8] && currentBoard[2] !== '') {
+    winMsg();
 
   } else {
-    return null;
+    return false;
   }
 };
 
 const catsGame = function () {
   if (turnCount > 8 && $(this).val() !== '') {
-    gameOver = true;
     catsGameMsg();
 
   } else {
-    return null;
+    return false;
   }
 };
 
 const winDiagonal = function (){
   if (
-  currentBoard[0] === currentBoard[4] && currentBoard[0] === currentBoard[8] && currentBoard[0] !== '' ||
-  currentBoard[2] === currentBoard[4] && currentBoard[2] === currentBoard[6] && currentBoard[2] !== '') {
-  gameOver = true;
-  winMsg();
+    currentBoard[0] === currentBoard[4] && currentBoard[0] === currentBoard[8] && currentBoard[0] !== '' ||
+    currentBoard[2] === currentBoard[4] && currentBoard[2] === currentBoard[6] && currentBoard[2] !== '') {
+    winMsg();
 
   } else {
     catsGame();
@@ -102,15 +93,21 @@ let winCheck = function () {
   return winRow() || winColumn() || winDiagonal();
 };
 
+// let gameState = function () {
+//   if (winMsg() === true) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+//
+// };
 
 const newGameBoard = function (){
   $('.square').html('');
   currentBoard = ['','','','','','','','',''];
   turnCount = 0;
-  gameOver = false;
+  gameOver = 0;
 };
-
-const getTotalGames = function() {};
 
 
 module.exports = {
@@ -121,8 +118,6 @@ module.exports = {
   winCheck,
   newGameBoard,
   gameOver,
-  getTotalGames
-
-  // data
+  // gameState
 
 };

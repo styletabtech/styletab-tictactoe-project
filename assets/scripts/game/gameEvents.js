@@ -15,6 +15,7 @@ const onSquareClick = function (event) {
   let index = $('#' + squareClicked).data("id");
   let value = $('#' + squareClicked).html();
   api.updateGame(index, value, logic.gameOver)
+  //    console.log(index, value, logic.gameOver)
      .done(ui.onUpdateSuccess)
      .fail(ui.onError);
 };
@@ -32,7 +33,7 @@ const createNewGame = function (event) {
 
 const onGetGames = function (event) {
   event.preventDefault();
-  api.getTotalGames()
+  api.getTotalGames(event)
       .done(ui.onShowGamesTotal)
       .fail(ui.onError);
 };

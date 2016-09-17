@@ -11,6 +11,7 @@ const signInSuccess = (data) => {
 //for signing up
 const success = (data) => {
   app.user = data.user;
+  
 };
 
 const failure = (error) => {

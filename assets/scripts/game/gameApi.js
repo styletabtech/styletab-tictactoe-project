@@ -38,12 +38,10 @@ const getTotalGames = () => {
   return $.ajax({
     url: app.host + '/games',
     method: 'GET',
-    Authorization: 'Token token=' + app.user.token,
-  }
-  );
-
-
-
+    headers: {
+      Authorization: 'Token token=' + app.user.token,
+    },
+  });
 };
 
 
