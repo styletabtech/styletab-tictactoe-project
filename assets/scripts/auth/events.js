@@ -75,6 +75,10 @@ $('#change-pw').on('submit', function(){
 $('#sign-out-nav').on('click', onSignOut);
 
 $(document).on('ready', function(){
+  $('.welcome-page').show();
+  $('#sign-up-nav').show();
+  $('#sign-in-nav').show();
+  $('.navbar').hide();
 // $('#sign-out-nav').hide();
 // $('#change-pw-nav').hide();
 });

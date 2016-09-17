@@ -2,6 +2,7 @@
 
 const app = require('../app');
 
+
 const signInSuccess = (data) => {
   app.user = data.user;
   console.log(data.user);
@@ -11,7 +12,7 @@ const signInSuccess = (data) => {
 //for signing up
 const success = (data) => {
   app.user = data.user;
-  
+
 };
 
 const failure = (error) => {
@@ -27,7 +28,8 @@ const changePasswordSuccess = () => {
 
 const signOutSuccess = () => {
   app.user = null;
-  console.log('successfully signed out');
+  $('.board').hide();
+
 };
 
 module.exports = {
