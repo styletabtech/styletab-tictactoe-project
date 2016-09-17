@@ -6,7 +6,8 @@ const app = require('../app');
 const signInSuccess = (data) => {
   app.user = data.user;
   console.log(data.user);
-  console.log("hi");
+  $('.welcome-page').hide();
+  $('.navbar').show();
 };
 
 //for signing up
@@ -22,13 +23,21 @@ const failure = (error) => {
 const changePasswordSuccess = () => {
   // console.log(data.user);
   // app.user = data.user;
+  // $('.pw-success-msg').show();
   console.log('password successfully changed');
 
 };
 
 const signOutSuccess = () => {
   app.user = null;
-  $('.board').hide();
+  $('.welcome-page').show();
+  $('#sign-up-nav').show();
+  $('#sign-in-nav').show();
+  $('.win-msg-x').hide();
+  $('.win-msg-o').hide();
+  $('.draw-msg').hide();
+  $('.total-games-msg').hide();
+  $('.navbar').hide();
 
 };
 
