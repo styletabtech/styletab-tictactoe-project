@@ -7,7 +7,8 @@ const signInSuccess = (data) => {
   app.user = data.user;
   console.log(data.user);
   $('.welcome-page').hide();
-  $('.navbar').show();
+  $('.board-page').show();
+
 };
 
 //for signing up

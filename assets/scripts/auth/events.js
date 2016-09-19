@@ -86,8 +86,8 @@ $(document).on('ready', function(){
   $('.welcome-page').show();
   $('#sign-up-nav').show();
   $('#sign-in-nav').show();
-  $('.navbar').hide();
-// $('#sign-out-nav').hide();
+  $('.board-page').hide();
+ // $('.logo').hide();
 // $('#change-pw-nav').hide();
 });
 
