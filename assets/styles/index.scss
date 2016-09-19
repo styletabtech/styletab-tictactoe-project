@@ -10,6 +10,7 @@ $unit: 20px;
 $width: (4 * $unit);
 $height: (4 * $unit);
 $hover: #d60063;
+$main-font: 'Maven Pro', sans-serif;
 
 body {
   background-color: $background-color;
@@ -72,7 +73,7 @@ body {
   background: transparent;
   box-sizing: border-box;
   color: $nav-color;
-  font-family: 'Maven Pro', sans-serif;
+  font-family: $main-font;
   font-size: 25px;
   // opacity: 1;
   padding: 15px 10px;
@@ -95,7 +96,7 @@ body {
 }
 
 .welcome-prompt {
-  font-family: 'Maven Pro', sans-serif;
+  font-family: $main-font;
   font-size: 50px;
 }
 
@@ -193,4 +194,19 @@ span {
   top: 0;
   width: 50%;
   z-index: 100;
+}
+
+// modals
+
+
+.modal-title {
+  color: $hover;
+  font-family: $main-font;
+  font-size: 20px;
+  text-align: center;
+}
+
+.btn-primary {
+  color: $hover;
+  font-family: $main-font;
 }
