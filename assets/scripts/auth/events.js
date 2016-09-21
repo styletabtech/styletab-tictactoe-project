@@ -87,8 +87,8 @@ $(document).on('ready', function(){
   $('#sign-up-nav').show();
   $('#sign-in-nav').show();
   $('.board-page').hide();
- // $('.logo').hide();
-// $('#change-pw-nav').hide();
+
+
 });
 
 };
