@@ -1,22 +1,14 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
-$background-color: #4e4e4e;
-$font-color: #838ef0;
+$background-color: #1a1d2c; // #4e4e4e;
 $nav-color: #dfdfdf;
-$winner: #e8e4a9;
-$cats-game: #91b6f0;
-$unit: 20px;
-$width: (4 * $unit);
-$height: (4 * $unit);
 $hover: #d60063;
 $main-font: 'Maven Pro', sans-serif;
 
 body {
   background-color: $background-color;
-  color: $font-color;
 }
-
 
 
 //nav buttons
@@ -171,7 +163,6 @@ span {
 
 .win-msg-x {
   background: $background-color;
-  border: 2px solid $hover;
   box-sizing: border-box;
   color: $nav-color;
   display: none;
@@ -247,21 +238,24 @@ span {
 
 .total-games-msg {
   background: $background-color;
+  // border: 2px solid $hover;
   box-sizing: border-box;
   color: $nav-color;
   display: none;
   font-family: $main-font;
   font-size: 40px;
   height: 80%;
+  padding-left: 33%;
+  padding-top: 15%;
   position: absolute;
   top: 20%;
   width: 100%;
   z-index: 100;
 }
 
-
 #games-total {
   font-family: $main-font;
+  color: $hover;
 }
 // modals
 

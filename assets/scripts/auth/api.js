@@ -3,7 +3,6 @@
 const app = require('../app');
 
 const signUp = (data) => {
-//  console.log(data);
   return $.ajax({
     url: app.host + '/sign-up',
     method: 'POST',
@@ -20,7 +19,6 @@ const autoLogIn = function (data, textStatus, jqXHR, signUpData) {
 };
 
 const signIn = (data) => {
-//  console.log(data);
   return $.ajax({
     url: app.host + '/sign-in',
     method: 'POST',
@@ -41,7 +39,6 @@ const changePassword = (data) => {
 };
 
 const signOut = () => {
-//  console.log(data);
   return $.ajax ({
     url: app.host + '/sign-out/' + app.user.id,
     method: 'DELETE',
