@@ -12,7 +12,6 @@ const onMinimize = function () {
 
  const onSuccess = function (data) {
   app.game = data.game;
-//  console.log('app is', app);
 };
 
 
