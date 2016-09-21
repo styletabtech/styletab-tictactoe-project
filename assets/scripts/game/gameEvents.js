@@ -15,7 +15,6 @@ const onSquareClick = function (event) {
   let index = $('#' + squareClicked).data("id");
   let value = $('#' + squareClicked).html();
   api.updateGame(index, value, logic.gameOver)
-  //    console.log(index, value, logic.gameOver)
      .done(ui.onUpdateSuccess)
      .fail(ui.onError);
 };
@@ -46,7 +45,7 @@ const addHandlers = () => {
   $(document).on('ready', function(){
   $('.board').hide();
   $('.total-games-msg').hide();
-  
+
 
   });
 

@@ -3,7 +3,6 @@
 const app = require('../app');
 
 const newGame = () => {
-  console.log();
    return $.ajax({
     url: app.host + '/games',
     method: 'POST',
@@ -14,7 +13,6 @@ const newGame = () => {
 };
 
  const updateGame = function(index, value, game) {
-  console.log('updateGame is running');
   return $.ajax({
     method: 'PATCH',
     url: app.host + '/games/'+ app.game.id,
@@ -34,7 +32,6 @@ const newGame = () => {
 };
 
 const getTotalGames = () => {
-  console.log('getTotalGames is running');
   return $.ajax({
     url: app.host + '/games',
     method: 'GET',

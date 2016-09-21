@@ -34,11 +34,16 @@ const signOutSuccess = () => {
   $('.welcome-page').show();
   $('#sign-up-nav').show();
   $('#sign-in-nav').show();
-  $('.win-msg-x').hide();
-  $('.win-msg-o').hide();
-  $('.draw-msg').hide();
-  $('.total-games-msg').hide();
-  $('.navbar').hide();
+  $('.board-page').hide();
+
+  // $('.welcome-page').show();
+  // $('#sign-up-nav').show();
+  // $('#sign-in-nav').show();
+  // $('.win-msg-x').hide();
+  // $('.win-msg-o').hide();
+  // $('.draw-msg').hide();
+  // $('.total-games-msg').hide();
+  // $('.navbar').hide();
 
 };
 

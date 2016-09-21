@@ -26,11 +26,7 @@ const onUpdateSuccess = function (data) {
 };
 
 const onShowGamesTotal = function (data) {
-  console.log('onShowGamesTotal is ', data);
   $('.total-games-msg').show();
-  setTimeout(function() {
-       $('.games-popup').fadeOut();
-          }, 2000);
   let totalGames = data.games.length;
   $('#games-total').html(totalGames);
   //.show on the div that will be hiding
