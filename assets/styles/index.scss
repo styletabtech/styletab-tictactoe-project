@@ -18,7 +18,6 @@ body {
   border-radius: 0;
   float: right;
   margin: 0;
-
 }
 
 .btn:hover {
@@ -81,7 +80,6 @@ span {
   font-family: 'Permanent Marker', cursive;
   font-weight: bold;
 }
-
 
 // board page with nav and game board
 
@@ -158,7 +156,6 @@ span {
 }
 
 // win messages
-
 
 
 .win-msg-x {
@@ -254,9 +251,10 @@ span {
 }
 
 #games-total {
-  font-family: $main-font;
   color: $hover;
+  font-family: $main-font;
 }
+
 // modals
 
 .modal-title {
