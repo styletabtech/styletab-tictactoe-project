@@ -20,7 +20,6 @@ const onError = function (response) {
 };
 
 const onUpdateSuccess = function (data) {
-  console.log('onUpdateSuccess is ', data);
   app.game = data.game;
 };
 

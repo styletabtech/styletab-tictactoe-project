@@ -5,7 +5,6 @@ const app = require('../app');
 
 const signInSuccess = (data) => {
   app.user = data.user;
-  console.log(data.user);
   $('.welcome-page').hide();
   $('.board-page').show();
 
@@ -25,7 +24,6 @@ const changePasswordSuccess = () => {
   // console.log(data.user);
   // app.user = data.user;
   // $('.pw-success-msg').show();
-  console.log('password successfully changed');
 
 };
 
