@@ -10,6 +10,14 @@ const signUp = (data) => {
   });
 };
 
+const autoLogIn = function (data, textStatus, jqXHR, signUpData) {
+  return $.ajax({
+    url: app.host + '/sign-in',
+    method: 'POST',
+    data: signUpData
+  });
+};
+
 const signIn = (data) => {
   return $.ajax({
     url: app.host + '/sign-in',
@@ -42,6 +50,7 @@ const signOut = () => {
 
 module.exports = {
   signUp,
+  autoLogIn,
   signIn,
   changePassword,
   signOut,

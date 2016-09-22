@@ -1,35 +1,15 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
-$background-color: #4e4e4e;
-$font-color: #838ef0;
+$background-color: #1a1d2c; // #4e4e4e;
 $nav-color: #dfdfdf;
-$winner: #e8e4a9;
-$cats-game: #91b6f0;
-$unit: 20px;
-$width: (4 * $unit);
-$height: (4 * $unit);
+$hover: #d60063;
+$main-font: 'Maven Pro', sans-serif;
 
 body {
   background-color: $background-color;
-  color: $font-color;
 }
 
-
-.board {
-  display: inline-block;
-  margin-left: 41%;
-}
-
-.square {
-  border: 1px solid;
-  box-sizing: border-box;
-  font-size: 30px;
-  height: 100px;
-  padding: 10%;
-  text-align: center;
-  width: 100px;
-}
 
 //nav buttons
 .btn {
@@ -38,77 +18,253 @@ body {
   border-radius: 0;
   float: right;
   margin: 0;
+}
+
+.btn:hover {
+  background: none;
+  color: $hover; }
+
+.welcome-page {
+  background-image: url('welcome-page.jpg');
+  background-size: cover;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+
+.welcome-buttons {
+//  background-color: rgba(232, 236, 237, .4);
+//  border: 2px solid $hover;
+  left: 50%;
+  position: absolute;
+  top: 20%;
+  transform: translate(-50%, -50%);
+};
+
+.welcome-btn {
+  background: transparent;
+  box-sizing: border-box;
+  color: $nav-color;
+  font-family: $main-font;
+  font-size: 25px;
+  // opacity: 1;
+  padding: 15px 10px;
+  text-align: center;
+  width: 200px;
+}
+
+
+.title-wrapper {
+  background: none;
+//  border: 2px solid $hover;
+  box-sizing: border-box;
+  color: $nav-color;
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  top: 7%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.welcome-prompt {
+  font-family: $main-font;
+  font-size: 50px;
+}
+
+span {
+  font-family: 'Permanent Marker', cursive;
+  font-weight: bold;
+}
+
+// board page with nav and game board
+
+.board-page {
+  background: $background-color;
+  background-size: cover;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+
+.title-wrapper-2 {
+  background: none;
+//  border: 2px solid $hover;
+  box-sizing: border-box;
+  color: $nav-color;
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  top: 7%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.logo {
+  font-family: $main-font;
+  font-size: 50px;
 
 }
 
 .navbar {
-  background-color: $nav-color;
-  border-radius: 0;
-  margin-top: 0;
-  min-height: 40px;
-  width: 100%;
+//  border: 2px solid $hover;
+  left: 50%;
+  position: absolute;
+  top: 17%;
+  transform: translate(-50%, -50%);
+//  width: 100%;
 };
 
-.logo {
-  background-color: $nav-color;
-  color: $font-color;
-  font-size: 35px;
-  height: 50px;
-  margin: 3% 25%;
+.navbar-btn {
+  background: transparent;
+  box-sizing: border-box;
+  color: $nav-color;
+  font-family: $main-font;
+  font-size: 20px;
+  padding: 10px 5px;
   text-align: center;
-  width: 50%;
-};
+  width: 170px;
+}
+
+.board {
+  box-sizing: border-box;
+  color: $nav-color;
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  top: 55%;
+  transform: translate(-50%, -50%);
+//  width: 100%;
+}
+
+.square {
+  border: 1px solid;
+  box-sizing: border-box;
+  font-size: 30px;
+  height: 150px;
+  padding: 10%;
+  text-align: center;
+  width: 150px;
+}
+
+// win messages
+
 
 .win-msg-x {
   background: $background-color;
   box-sizing: border-box;
-  color: $font-color;
+  color: $nav-color;
   display: none;
-  font-size: 50px;
-  height: 65%;
-  left: 0;
-  margin-left: 25%;
-  margin-top: 10%;
-  padding: 8%;
-  position: fixed;
-  text-align: center;
-  top: 0;
-  width: 50%;
+  font-family: $main-font;
+  font-size: 40px;
+  height: 80%;
+  position: absolute;
+  top: 20%;
+  width: 100%;
   z-index: 100;
+}
+
+#tay-gif {
+  box-sizing: border-box;
+  height: 316px;
+  left: 50%;
+  margin-left: -125px;
+  margin-top: -158px;
+  position: absolute;
+  top: 50%;
+  width: 250px;
 }
 
 .win-msg-o {
   background: $background-color;
   box-sizing: border-box;
-  color: $font-color;
+  color: $nav-color;
   display: none;
-  font-size: 50px;
-  height: 65%;
-  left: 0;
-  margin-left: 25%;
-  margin-top: 10%;
-  padding: 8%;
-  position: fixed;
-  text-align: center;
-  top: 0;
-  width: 50%;
+  font-family: $main-font;
+  font-size: 40px;
+  height: 80%;
+  position: absolute;
+  top: 20%;
+  width: 100%;
   z-index: 100;
+}
+
+#kanye-gif {
+  box-sizing: border-box;
+  height: 280px;
+  left: 50%;
+  margin-left: -250px;
+  margin-top: -140px;
+  position: absolute;
+  top: 50%;
+  width: 500px;
 }
 
 .draw-msg {
   background: $background-color;
   box-sizing: border-box;
-  color: $font-color;
+  color: $nav-color;
   display: none;
-  font-size: 50px;
-  height: 65%;
-  left: 0;
-  margin-left: 25%;
-  margin-top: 10%;
-  padding: 8%;
-  position: fixed;
-  text-align: center;
-  top: 0;
-  width: 50%;
+  font-family: $main-font;
+  font-size: 40px;
+  height: 80%;
+  position: absolute;
+  top: 20%;
+  width: 100%;
   z-index: 100;
+}
+
+#kim-gif {
+  box-sizing: border-box;
+  height: 280px;
+  left: 50%;
+  margin-left: -250px; // half width
+  margin-top: -140px; // half height
+  position: absolute;
+  top: 50%;
+  width: 500px;
+}
+
+.total-games-msg {
+  background: $background-color;
+  // border: 2px solid $hover;
+  box-sizing: border-box;
+  color: $nav-color;
+  display: none;
+  font-family: $main-font;
+  font-size: 40px;
+  height: 80%;
+  padding-left: 33%;
+  padding-top: 15%;
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  z-index: 100;
+}
+
+#games-total {
+  color: $hover;
+  font-family: $main-font;
+}
+
+// modals
+
+.modal-title {
+  color: $hover;
+  font-family: $main-font;
+  font-size: 20px;
+  text-align: center;
+}
+
+.btn-primary {
+  color: $hover;
+  font-family: $main-font;
 }

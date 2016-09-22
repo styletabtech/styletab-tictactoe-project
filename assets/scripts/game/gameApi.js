@@ -12,7 +12,7 @@ const newGame = () => {
   });
 };
 
-const updateGame = function(index, value, game) {
+ const updateGame = function(index, value, game) {
   return $.ajax({
     method: 'PATCH',
     url: app.host + '/games/'+ app.game.id,
@@ -31,8 +31,19 @@ const updateGame = function(index, value, game) {
   });
 };
 
+const getTotalGames = () => {
+  return $.ajax({
+    url: app.host + '/games',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + app.user.token,
+    },
+  });
+};
+
 
 module.exports = {
 newGame,
 updateGame,
+getTotalGames
 };
