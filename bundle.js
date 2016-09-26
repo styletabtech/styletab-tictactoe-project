@@ -120,10 +120,11 @@ webpackJsonp([0],[
 	  $('#sign-out-nav').on('click', onSignOut);
 
 	  $(document).on('ready', function () {
+	    $('.board-page').hide();
+	    //  $('.board').hide();
 	    $('.welcome-page').show();
 	    $('#sign-up-nav').show();
 	    $('#sign-in-nav').show();
-	    $('.board-page').hide();
 	  });
 	};
 
@@ -284,8 +285,13 @@ webpackJsonp([0],[
 
 	var signInSuccess = function signInSuccess(data) {
 	  app.user = data.user;
-	  $('.welcome-page').hide();
+	  //  $('.welcome-page').hide();
 	  $('.board-page').show();
+	  $('.board').hide();
+	  $('.win-msg-x').hide();
+	  $('.win-msg-o').hide();
+	  $('.draw-msg').hide();
+	  $('.total-games-msg').hide();
 	};
 
 	//for signing up
@@ -368,10 +374,12 @@ webpackJsonp([0],[
 	  $('.square').on('click', onSquareClick);
 	  $('#total-games-nav').on('click', onGetGames);
 
-	  $(document).on('ready', function () {
-	    $('.board').hide();
-	    $('.total-games-msg').hide();
-	  });
+	  //   $(document).on('ready', function(){
+	  //
+	  // //  $('.total-games-msg').hide();
+	  //
+	  //
+	  //   });
 	};
 
 	module.exports = {
