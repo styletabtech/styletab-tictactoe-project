@@ -85,7 +85,7 @@ $('#sign-out-nav').on('click', onSignOut);
 $(document).on('ready', function(){
   $('.board-page').hide();
 //  $('.board').hide();
-  $('.welcome-page').show();
+  // $('.welcome-page').show();
   $('#sign-up-nav').show();
   $('#sign-in-nav').show();
 

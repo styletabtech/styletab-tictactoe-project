@@ -5,7 +5,7 @@ const app = require('../app');
 
 const signInSuccess = (data) => {
   app.user = data.user;
-//  $('.welcome-page').hide();
+  $('.welcome-page').hide();
   $('.board-page').show();
   $('.board').hide();
   $('.win-msg-x').hide();

@@ -122,7 +122,7 @@ webpackJsonp([0],[
 	  $(document).on('ready', function () {
 	    $('.board-page').hide();
 	    //  $('.board').hide();
-	    $('.welcome-page').show();
+	    // $('.welcome-page').show();
 	    $('#sign-up-nav').show();
 	    $('#sign-in-nav').show();
 	  });
@@ -285,7 +285,7 @@ webpackJsonp([0],[
 
 	var signInSuccess = function signInSuccess(data) {
 	  app.user = data.user;
-	  //  $('.welcome-page').hide();
+	  $('.welcome-page').hide();
 	  $('.board-page').show();
 	  $('.board').hide();
 	  $('.win-msg-x').hide();
