@@ -83,7 +83,7 @@ $('#change-pw').on('submit', function(){
 $('#sign-out-nav').on('click', onSignOut);
 
 $(document).on('ready', function(){
-  $('.board-page').hide();
+  // $('.board-page').hide();
 //  $('.board').hide();
   // $('.welcome-page').show();
   $('#sign-up-nav').show();

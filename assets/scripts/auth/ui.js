@@ -5,13 +5,15 @@ const app = require('../app');
 
 const signInSuccess = (data) => {
   app.user = data.user;
-  $('.welcome-page').hide();
-  $('.board-page').show();
+  // $('.welcome-page').hide();
+  // $('.board-page').show();
   $('.board').hide();
   $('.win-msg-x').hide();
   $('.win-msg-o').hide();
   $('.draw-msg').hide();
   $('.total-games-msg').hide();
+  $('.welcome-page').addClass('hide');
+  $('.board-page').removeClass('hide');
 };
 
 //for signing up
@@ -33,11 +35,12 @@ const changePasswordSuccess = () => {
 
 const signOutSuccess = () => {
   app.user = null;
-  $('.welcome-page').show();
+  // $('.welcome-page').show();
   $('#sign-up-nav').show();
   $('#sign-in-nav').show();
-  $('.board-page').hide();
-
+  // $('.board-page').hide();
+  $('.welcome-page').removeClass('hide');
+  $('.board-page').addClass('hide');
   // $('.welcome-page').show();
   // $('#sign-up-nav').show();
   // $('#sign-in-nav').show();
