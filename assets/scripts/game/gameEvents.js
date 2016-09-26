@@ -42,12 +42,12 @@ const addHandlers = () => {
   $('.square').on('click', onSquareClick);
   $('#total-games-nav').on('click', onGetGames);
 
-  $(document).on('ready', function(){
-  $('.board').hide();
-  $('.total-games-msg').hide();
-
-
-  });
+//   $(document).on('ready', function(){
+//
+// //  $('.total-games-msg').hide();
+//
+//
+//   });
 
 };
 
