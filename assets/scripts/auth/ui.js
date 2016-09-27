@@ -22,8 +22,7 @@ const success = (data) => {
 
 };
 
-const failure = (error) => {
-
+const failure = () => {
 };
 
 const changePasswordSuccess = () => {

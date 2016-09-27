@@ -8,14 +8,14 @@
 
 <h3>Wireframe (desktop & mobile):</h3> https://app.moqups.com/katherinetab@gmail.com/U9jeEt2UEw/view/page/a349ccaa7
 
-<h3>User Stories</h3> 
+<h3>User Stories</h3>
 <li>As a user, I want to sign up so I can keep track of my wins.</li>
 <li>As a user, I want to play tic tac toe with another play so I can win.</li>
 <li>As a user, I want to sign in so I can see how many games I’ve won.</li>
 <li>As a user, I want to sign out so I can ensure no one else plays on my account.</li>
 <li>As a user, I want to play tic tac toe because it’s easy to learn and requires strategy.</li>
 
-<h3>Technologies Used</h3> 
+<h3>Technologies Used</h3>
 HTML, CSS, JavaScript, Bootstrap, AJAX, Sass
 
 <h3>My process: </h3>
@@ -34,17 +34,10 @@ HTML, CSS, JavaScript, Bootstrap, AJAX, Sass
 
 <h3>Unfinished Business: </h3>
 <ul>
-<li>Fix change password</li>
-<li>Fix sign out</li>
-<li>Fix game state issue that doesn't override global variable when win condition is met</li>
-<li>GET request to retrieve games played</li>
-<li>Update modals to hide once submit button is clicked</li>
-<li>Hide board on page load</li>
-<li>Create sign in page to require sign up or sign in</li>
-<li>Hide sign up and sign in buttons once logged in</li>
-<li>Update styling and margins of board to make more responsive</li>
-<li>Update fonts and colors</li>
-<li>Add in style elements for Taylor vs. Kanye theme</li>
+<li>Incorporate responsive design</li>
+<li>Add in scoreboard</li>
+<li>Restyle nav to have a dropdown format for change PW and history</li>
+<li>Add welcome message that shows username on sign-in</li>
 
 </ul>
 
