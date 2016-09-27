@@ -23,7 +23,7 @@ const success = (data) => {
 };
 
 const failure = (error) => {
-  console.log('error is', error);
+
 };
 
 const changePasswordSuccess = () => {
