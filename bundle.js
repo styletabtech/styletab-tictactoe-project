@@ -301,9 +301,7 @@ webpackJsonp([0],[
 	  app.user = data.user;
 	};
 
-	var failure = function failure(error) {
-	  console.log('error is', error);
-	};
+	var failure = function failure() {};
 
 	var changePasswordSuccess = function changePasswordSuccess() {
 	  // console.log(data.user);
